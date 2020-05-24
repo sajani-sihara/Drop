@@ -1,0 +1,67 @@
+Flutter crash report; please file at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter build bundle --target C:\Users\PC\AndroidStudioProjects\drop\lib\main.dart --target-platform android-arm --filesystem-scheme org-dartlang-root --track-widget-creation --depfile C:\Users\PC\AndroidStudioProjects\drop\build\app\intermediates\flutter\debug\android-arm/snapshot_blob.bin.d --asset-dir C:\Users\PC\AndroidStudioProjects\drop\build\app\intermediates\flutter\debug\android-arm/flutter_assets --debug
+
+## exception
+
+FileSystemException: FileSystemException: Cannot open file, path = 'C:\Users\PC\AndroidStudioProjects\drop\assets\images\appicon.png' (OS Error: The system cannot find the file specified.
+, errno = 2)
+
+```
+#0      _File.open.<anonymous closure> (dart:io/file_impl.dart:364:9)
+#1      _rootRunUnary (dart:async/zone.dart:1132:38)
+#2      _CustomZone.runUnary (dart:async/zone.dart:1029:19)
+#3      _FutureListener.handleValue (dart:async/future_impl.dart:126:18)
+#4      Future._propagateToListeners.handleValueCallback (dart:async/future_impl.dart:639:45)
+#5      Future._propagateToListeners (dart:async/future_impl.dart:668:32)
+#6      Future._completeWithValue (dart:async/future_impl.dart:483:5)
+#7      Future._asyncComplete.<anonymous closure> (dart:async/future_impl.dart:513:7)
+#8      _rootRun (dart:async/zone.dart:1124:13)
+#9      _CustomZone.run (dart:async/zone.dart:1021:19)
+#10     _CustomZone.runGuarded (dart:async/zone.dart:923:7)
+#11     _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:963:23)
+#12     _microtaskLoop (dart:async/schedule_microtask.dart:41:21)
+#13     _startMicrotaskLoop (dart:async/schedule_microtask.dart:50:5)
+#14     _runPendingImmediateCallback (dart:isolate-patch/isolate_patch.dart:116:13)
+#15     _RawReceivePortImpl._handleMessage (dart:isolate-patch/isolate_patch.dart:173:5)
+```
+
+## flutter doctor
+
+```
+[✓] Flutter (Channel stable, v1.7.8+hotfix.4, on Microsoft Windows [Version 10.0.17134.286], locale en-US)
+    • Flutter version 1.7.8+hotfix.4 at C:\flutter
+    • Framework revision 20e59316b8 (10 days ago), 2019-07-18 20:04:33 -0700
+    • Engine revision fee001c93f
+    • Dart version 2.4.0
+
+[✓] Android toolchain - develop for Android devices (Android SDK version 29.0.0)
+    • Android SDK at C:\Users\PC\AppData\Local\Android\sdk
+    • Android NDK location not configured (optional; useful for native profiling support)
+    • Platform android-29, build-tools 29.0.0
+    • Java binary at: C:\Program Files\Android\Android Studio\jre\bin\java
+    • Java version OpenJDK Runtime Environment (build 1.8.0_152-release-1343-b01)
+    • All Android licenses accepted.
+
+[✓] Android Studio (version 3.4)
+    • Android Studio at C:\Program Files\Android\Android Studio
+    • Flutter plugin version 37.0.1
+    • Dart plugin version 183.6270
+    • Java version OpenJDK Runtime Environment (build 1.8.0_152-release-1343-b01)
+
+[✓] IntelliJ IDEA Community Edition (version 2018.3)
+    • IntelliJ at C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2018.3.3
+    • Flutter plugin version 35.3.1
+    • Dart plugin version 183.5901
+
+[✓] VS Code (version 1.32.3)
+    • VS Code at C:\Users\PC\AppData\Local\Programs\Microsoft VS Code
+    • Flutter extension version 2.25.1
+
+[✓] Connected device (1 available)
+    • SM J810G • 896c9798 • android-arm • Android 9 (API 28)
+
+• No issues found!
+```
